@@ -131,7 +131,7 @@ export default function DashboardPage() {
               <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#9CA3AF' }} />
               <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#9CA3AF' }} tickFormatter={(v) => `฿${(v/1000).toFixed(0)}k`} />
               <Tooltip
-                formatter={(v: number) => [`฿${v.toLocaleString()}`, 'Revenue']}
+                formatter={(v) => [`฿${Number(v ?? 0).toLocaleString()}`, 'Revenue']}
                 contentStyle={{ borderRadius: 12, border: '1px solid #E5E7EB', fontSize: 12 }}
                 cursor={{ fill: '#F5F7FA' }}
               />
