@@ -1,9 +1,3 @@
 {
-  "buildCommand": "cd animal-clinic-app && npm install && npm run build",
-  "outputDirectory": "animal-clinic-app/.next",
-  "installCommand": "cd animal-clinic-app && npm install",
-  "framework": "nextjs",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "framework": "nextjs"
 }
