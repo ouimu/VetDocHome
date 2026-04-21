@@ -51,7 +51,7 @@ export default function ReportsPage() {
                 <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#9CA3AF' }}
                   tickFormatter={(v) => `฿${(v/1000).toFixed(0)}k`} />
                 <Tooltip
-                  formatter={(v: number) => [`฿${v.toLocaleString()}`, 'Revenue']}
+                  formatter={(v) => [`฿${Number(v ?? 0).toLocaleString()}`, 'Revenue']}
                   contentStyle={{ borderRadius: 12, border: '1px solid #E5E7EB', fontSize: 12 }}
                   cursor={{ fill: '#F5F7FA' }}
                 />
@@ -74,7 +74,7 @@ export default function ReportsPage() {
                     <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(v: number) => [`${v}%`, 'Share']}
+                <Tooltip formatter={(v) => [`${Number(v ?? 0)}%`, 'Share']}
                   contentStyle={{ borderRadius: 12, border: '1px solid #E5E7EB', fontSize: 12 }} />
                 <Legend iconType="circle" iconSize={8}
                   formatter={(v) => <span style={{ fontSize: 12, color: '#6E6E73' }}>{v}</span>} />
